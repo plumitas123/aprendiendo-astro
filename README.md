@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Aprendiendo a usar Astro y un poco de git
 
 ```sh
 pnpm create astro@latest -- --template basics
