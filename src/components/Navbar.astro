@@ -3,16 +3,35 @@ import MenuIcon from "../assets/menu.svg"
 ---
 
 <header class="">
-    <section class="bg-red-500">
-        <p>Llamanos al Movil 3413612371</p>
+    <section class="bg-orange-500 px-8 py-[2px] text-center text-white font-semibold text-lg md:px-24 md:text-right">
+        <p>Llamenos al Movil 3413612371</p>
     </section>
-    <nav class="hidden md:flex ">
-        <ul>
-          <li>inicio</li>
-          <li>tratamientos</li>
-          <li>contacto</li> 
+    <nav class="shadow-lg flex items-center px-8 justify-between relative md:px-24" id="nav">
+        <picture class= "w-[400px] h-[50px] overflow-hidden">
+            <img src="../../public/logoGina2.png" class="h-full w-full object-contain"/>
+        </picture>
+        <ul class="hidden md:flex space-x-4 text-xl list-none uppercase cursor-pointer text-gray-600 ">
+          <li class="hover:text-orange-600">inicio</li>
+          <li class="hover:text-orange-600">tratamientos</li>
+          <li class="hover:text-orange-600">contacto</li> 
         </ul>
+        <MenuIcon id="menu-nav" class="w-6 h-6 cursor-pointer md:hidden" />
 
-       
+         <ul id="mobile-menu"
+          class="absolute top-full right-0 text-gray-600 shadow-lg list-none cursor-pointer text-lg flex flex-col space-y-3 px-6 py-4 w-full text-center uppercase md:hidden"
+        >
+          <li class="hover:text-orange-600">inicio</li>
+          <li class="hover:text-orange-600">tratamientos</li>
+          <li class="hover:text-orange-600">contacto</li>
+        </ul>
     </nav>
 </header>
+
+<script is:inline>
+    const btn = document.getElementById("menu-nav");
+    const menu = document.getElementById("mobile-menu");
+
+    btn?.addEventListener("click", () => {
+      menu.classList.toggle("hidden")
+    });
+</script>
